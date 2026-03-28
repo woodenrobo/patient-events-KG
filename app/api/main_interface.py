@@ -23,4 +23,4 @@ async def chat_message(
     request: ChatRequest,
     service: MainInterfaceService = Depends(get_main_interface_service),
 ) -> str:
-    return service.get_chat_response(request.user_message)
+    return await service.get_chat_response(request.user_message)

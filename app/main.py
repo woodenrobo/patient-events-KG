@@ -1,10 +1,22 @@
-from api.main_interface import router
-from config.environment import settings
-from config.logging import configure_logging
+from collections.abc import AsyncGenerator
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app.api.main_interface import router
+from app.config.database import close_database_driver, verify_database_connectivity
+from app.config.environment import settings
+from app.config.logging import configure_logging
+
 logger = configure_logging()
+
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI) -> AsyncGenerator[None, None]:
+    await verify_database_connectivity()
+    yield
+    await close_database_driver()
 
 
 app = FastAPI(
@@ -13,6 +25,7 @@ app = FastAPI(
     openapi_url="/openapi.json",
     docs_url="/docs",
     redoc_url="/redoc",
+    lifespan=lifespan,
 )
 
 app.add_middleware(

@@ -36,7 +36,11 @@ class MainInterfaceRepository:
         identity_key: str,
         properties: dict,
     ) -> None:
-        """MERGE a node on identity_key, then SET all properties."""
+        """MERGE a node on identity_key, then SET all properties.
+
+        Expects id, created_at, updated_at to already be set in properties
+        by the caller (IngestionTool) before this is called.
+        """
         query = cast(
             LiteralString,
             f"MERGE (n:{label} {{{identity_key}: $identity}}) SET n += $props",
@@ -74,6 +78,25 @@ class MainInterfaceRepository:
             to_val=to_val,
             props=rel_props or {},
         )
+
+    async def get_modal_care_path(self, condition_name: str) -> list[dict]:
+        # MATCH (p:Patient)-[:HAS_CONDITION]->(c:Condition {name: $condition})
+        # MATCH (p)-[:VISITED]->(e:CareEvent)
+        # RETURN e.name AS event, count(*) AS freq ORDER BY freq DESC
+        raise NotImplementedError
+
+    async def get_symptoms_preceding_diagnosis(self, condition_name: str) -> list[dict]:
+        # MATCH (c:Condition {name: $condition})-[:PRECEDED_BY]->(s:Symptom)
+        # RETURN s.name AS symptom, count(*) AS freq ORDER BY freq DESC
+        raise NotImplementedError
+
+    async def get_medications_cooccurring_with_symptom(
+        self, symptom_name: str
+    ) -> list[dict]:
+        # MATCH (p:Patient)-[:EXPERIENCED]->(s:Symptom {name: $symptom})
+        # MATCH (p)-[:PRESCRIBED]->(m:Medication)
+        # RETURN m.name AS medication, count(*) AS freq ORDER BY freq DESC
+        raise NotImplementedError
 
 
 def get_main_interface_repository(
