@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 
 
-def configure_logging() -> logging.Logger:
+def configure_logging() -> None:
     default_log_dir = Path(__file__).resolve().parent.parent.parent / "logs"
     log_dir = Path(os.environ.get("LOG_DIR", default_log_dir))
     log_dir.mkdir(parents=True, exist_ok=True)
@@ -26,5 +26,3 @@ def configure_logging() -> logging.Logger:
     stream_handler = logging.StreamHandler()
     stream_handler.setFormatter(formatter)
     root_logger.addHandler(stream_handler)
-
-    return logging.getLogger(__name__)

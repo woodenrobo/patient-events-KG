@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "patient": "Alice M.",
+    "message": "I'm Alice M. I had COVID-19 in March 2022. Before I was diagnosed with Long COVID, I was already experiencing severe fatigue and brain fog for weeks. I was eventually diagnosed with Post-COVID-19 syndrome. My primary care doctor prescribed low-dose naltrexone. I also visited a long COVID clinic and a neurologist."
+  },
+  {
+    "id": 2,
+    "patient": "Ben T.",
+    "message": "I'm Ben T. I contracted COVID-19 in April 2022. Prior to my Long COVID diagnosis, I had persistent heart palpitations and shortness of breath that wouldn't go away. I was diagnosed with Post-COVID-19 syndrome and had a cardiology evaluation. My cardiologist prescribed sertraline to help manage the symptoms. The long COVID clinic has been instrumental in my recovery."
+  },
+  {
+    "id": 3,
+    "patient": "Carol N.",
+    "message": "I'm Carol N. After recovering from COVID-19 in May 2022, I noticed post-exertional malaise whenever I tried to exercise. Before my Long COVID diagnosis, I also had significant sleep disturbance and fatigue. I was diagnosed with Post-COVID-19 syndrome and have been taking melatonin and N-acetylcysteine. My occupational therapist helped me manage my activity levels."
+  },
+  {
+    "id": 4,
+    "patient": "David R.",
+    "message": "I'm David R. I had COVID-19 in June 2022. Before being diagnosed with Long COVID, I struggled with cognitive impairment and couldn't focus at work. I was diagnosed with Post-COVID-19 syndrome and visited a neurology consult. My doctor prescribed guanfacine to help with my cognitive symptoms. The primary care doctor has been monitoring my progress."
+  },
+  {
+    "id": 5,
+    "patient": "Elena S.",
+    "message": "I'm Elena S. COVID-19 hit me in February 2022, and the aftermath was challenging. Before my Long COVID diagnosis, I experienced severe brain fog and dyspnea that limited my activities. I was diagnosed with Post-COVID-19 syndrome and saw a pulmonology specialist. They recommended N-acetylcysteine and I also had a primary care visit to coordinate my care."
+  },
+  {
+    "id": 6,
+    "patient": "Frank L.",
+    "message": "I'm Frank L. After COVID-19 in July 2022, I developed persistent heart palpitations and fatigue. Before my Long COVID diagnosis was confirmed, these symptoms were interfering with my daily life. I was diagnosed with Post-COVID-19 syndrome and had a cardiology evaluation. My cardiologist prescribed loratadine for allergic symptoms and low-dose naltrexone for overall symptom management."
+  },
+  {
+    "id": 7,
+    "patient": "Grace W.",
+    "message": "I'm Grace W. I contracted COVID-19 in August 2022. Prior to my Long COVID diagnosis, I had severe post-exertional malaise and sleep disturbance. I was diagnosed with Post-COVID-19 syndrome and visited a long COVID clinic and an occupational therapist. They've helped me pace my activities better. I'm taking melatonin and sertraline to manage my symptoms."
+  },
+  {
+    "id": 8,
+    "patient": "Henry B.",
+    "message": "I'm Henry B. COVID-19 in September 2022 left me with ongoing challenges. Before I was diagnosed with Long COVID, I experienced brain fog, fatigue, and cognitive impairment. I was diagnosed with Post-COVID-19 syndrome and had a neurology consult. My neurologist prescribed guanfacine and recommended N-acetylcysteine supplementation."
+  },
+  {
+    "id": 9,
+    "patient": "Iris C.",
+    "message": "I'm Iris C. After COVID-19 in January 2022, I struggled with dyspnea and heart palpitations. Before my Long COVID diagnosis, these respiratory and cardiac symptoms were quite frightening. I was diagnosed with Post-COVID-19 syndrome and had both a pulmonology consult and a cardiology evaluation. My doctors prescribed metformin and sertraline, and I visited a long COVID clinic."
+  },
+  {
+    "id": 10,
+    "patient": "James O.",
+    "message": "I'm James O. I had COVID-19 in October 2022. Before my Long COVID diagnosis was made, I was dealing with severe post-exertional malaise and sleep disturbance that were exhausting. I was diagnosed with Post-COVID-19 syndrome and worked with an occupational therapist at the long COVID clinic. I take loratadine and melatonin daily to help manage my symptoms."
+  }
+]

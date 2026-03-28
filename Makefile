@@ -6,3 +6,6 @@ run-neo4j:
 
 stop-neo4j:
 	docker compose stop neo4j
+
+seed:
+	bash scripts/seed/seed.sh

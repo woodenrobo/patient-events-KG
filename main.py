@@ -1,3 +1,4 @@
+import logging
 from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
 
@@ -9,14 +10,15 @@ from app.config.database import close_database_driver, verify_database_connectiv
 from app.config.environment import settings
 from app.config.logging import configure_logging
 
-logger = configure_logging()
+configure_logging()
+logger = logging.getLogger(__name__)
 
 
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncGenerator[None, None]:
-    verify_database_connectivity()
+    await verify_database_connectivity()
     yield
-    close_database_driver()
+    await close_database_driver()
 
 
 app = FastAPI(

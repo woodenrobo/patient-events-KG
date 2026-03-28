@@ -1,7 +1,10 @@
 import datetime
+from typing import Annotated, Literal
 from uuid import UUID, uuid4
 
 from pydantic import BaseModel, Field
+
+from app.repositories.main_interface_repository import NodeLabel
 
 
 class BaseNode(BaseModel):
@@ -18,10 +21,38 @@ class NamedNode(BaseNode):
     name: str
 
 
+class PatientNode(NamedNode):
+    label: Literal[NodeLabel.PATIENT] = NodeLabel.PATIENT
+
+
 class ConditionNode(NamedNode):
+    label: Literal[NodeLabel.CONDITION] = NodeLabel.CONDITION
     icd_code: str | None = None
 
 
+class MedicationNode(NamedNode):
+    label: Literal[NodeLabel.MEDICATION] = NodeLabel.MEDICATION
+
+
+class SymptomNode(NamedNode):
+    label: Literal[NodeLabel.SYMPTOM] = NodeLabel.SYMPTOM
+
+
 class CareEventNode(NamedNode):
-    name: str
+    label: Literal[NodeLabel.CARE_EVENT] = NodeLabel.CARE_EVENT
     date: str | None = None
+
+
+class ProviderNode(NamedNode):
+    label: Literal[NodeLabel.PROVIDER] = NodeLabel.PROVIDER
+
+
+AnyNode = Annotated[
+    PatientNode
+    | ConditionNode
+    | MedicationNode
+    | SymptomNode
+    | CareEventNode
+    | ProviderNode,
+    Field(discriminator="label"),
+]
