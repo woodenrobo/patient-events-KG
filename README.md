@@ -7,7 +7,7 @@ This is a learning/portfolio project.
 
 ## Installation
 - `uv venv && uv sync`
-- Start Neo4j with `docker compose up -d neo4j`
+- Start Neo4j with `make run-neo4j`
 - Run the API with `make run`
 
 Neo4j is wrapped in Docker Compose and exposes:
