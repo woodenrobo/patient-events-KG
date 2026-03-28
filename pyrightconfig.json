@@ -1,0 +1,29 @@
+{
+  "exclude": [
+    "**/__pycache__",
+    "**/.venv",
+    "**/node_modules",
+    "**/.git",
+    "**/.*",
+  ],
+  "extraPaths": [
+    "."
+  ],
+  "include": [
+    ".",
+    "app",
+    "tests"
+  ],
+  "pythonVersion": "3.12",
+  "reportMissingImports": true,
+  "reportMissingParameterType": false,
+  "reportMissingTypeStubs": false,
+  "reportUnknownArgumentType": false,
+  "reportUnknownMemberType": false,
+  "reportUnknownParameterType": false,
+  "reportUnknownVariableType": false,
+  "reportUntypedClassDecorator": false,
+  "reportUntypedFunctionDecorator": false,
+  "reportUnusedImport": true,
+  "reportUnusedVariable": true
+}
